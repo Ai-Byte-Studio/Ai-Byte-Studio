@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'ai logo.png' %}" type="image/x-icon">
+    <title>Ai Byte Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Grey+Qo&display=swap"
+        rel="stylesheet">
+</head>
+<header class="container">
+    <a href=""><img class="logosize" src="{% static 'ai logo.png' %}" alt="Ai Byte Studio"></a>
+    <label for="qengine">
+    </label>
+    <input type="text" placeholder="Query Engine" class="qengine">
+
+    <nav class="mennav">
+        <img class="menuico" src="{% static 'menubuttonicon.png' %}">
+        <p class="Menudro">Menu</p>
+        <div class="drpd">
+            <ul class="menuul">
+                <a href="" class="menuanc">
+                    <li class="menuli"><img style="height: 30px;" src="{% static 'ai logo.png' %}" alt="">Home</li>
+                </a>
+                <a href="" class="menuanc">
+                    <li class="menuli">Services</li>
+                </a>
+                <a href="" class="menuanc">
+                    <li class="menuli">Replica</li>
+                </a>
+                <a href="" class="menuanc">
+                    <li class="menuli">Contact Us</li>
+                </a>
+                <a href="" class="menuanc">
+                    <li class="menuli">About Us</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <style>/* Base styles for the navbar */
+        .navbar {
+            background-color: #fa8e00;
+            padding: 10px 20px;
+            position: relative;
+            margin-left: 150px;
+            border-radius: 50px;
+        }
+        
+        /* Menu icon for mobile screens */
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+        
+        /* Navigation links */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            /* justify-content: space-around; */
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            padding: 10px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Media query for mobile screens */
+        @media (max-width: 768px) {
+            /* Hide the regular navbar and show the menu icon */
+            .menu-icon {
+                display: block;
+            }
+        
+            /* Style the navigation links as a vertical sidebar */
+            .nav-links {
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: -250px;
+                width: 250px;
+                height: 100%;
+                background-color: #333;
+                padding-top: 60px;
+                transition: 0.3s;
+            }
+        
+            /* Adjust link padding for vertical layout */
+            .nav-links li {
+                padding: 15px 20px;
+            }
+        
+            /* When the menu is active, slide the sidebar into view */
+            .navbar.active .nav-links {
+                left: 0;
+            }
+            .navbar {
+            background-color: #fa8e00;
+            padding: 10px 20px;
+            position: relative;
+            margin-left: 280px;
+        }
+        }
+        </style>
+        <script>function toggleMenu() {
+            document.querySelector('.navbar').classList.toggle('active');
+        }
+        </script>
+
+
+
+</header>
+<style>
+    @media (max-width: 786px) {
+        .ainav{
+            display: none;
+        }
+        
+
+        
+    }
+    .menicon{
+
+        margin-left: 300px;
+        width: 10px;
+    }
+    .ainav {
+        /* display: inline-block; */
+        background-color: #fffb00;
+        margin-left: 150px;
+        border-radius: 46px;
+        /* width: auto; */
+        
+    }
+    .ainav .aili{
+      float: left;
+      list-style: none;
+      margin: 13px 20px;
+
+    }
+    .ainav .aili .aia {
+        padding: 3px 3px;
+        text-decoration: none;
+
+
+        /* padding: 3px 3px; */
+
+
+    }
+    .ainav .aiul{
+        overflow: auto;
+    }
+    
+    
+
+</style>
+
+<body>
+
+</body>
+
+</html>
+<style>
+    .container {
+        display: flex;
+    }
+
+    .logosize {
+        max-width: 4rem;
+    }
+
+    .qengine {
+        max-width: 10rem;
+        border-radius: 50px;
+        border: none;
+        margin-top: 0.56rem;
+        margin-bottom: 0.4rem;
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+        height: 30px;
+    }
+
+    .qengine::placeholder {
+        text-align: center;
+    }
+
+    .menuico {
+        position: absolute;
+
+        height: 3.5rem;
+    }
+
+    .Menudro {
+        position: absolute;
+        z-index: 1;
+        transform: translate(50px, 3px);
+        margin-top: 0;
+        margin-bottom: 0;
+
+        font-family: "Grey Qo", cursive;
+        font-optical-sizing: auto;
+        font-weight: 550;
+        font-size: 30px;
+        font-style: normal;
+
+
+    }
+
+    .mennav {
+        position: relative;
+        width: fit-content;
+        /* Adjust as needed */
+    }
+
+    .Menudro {
+        cursor: pointer;
+        font-weight: bold;
+        position: relative;
+        padding: 8px 16px;
+        /* background-color: #333; Optional styling */
+        color: #030303;
+        /* Optional styling */
+    }
+
+    .drpd {
+        display: none;
+        /*Initially hidden*/
+        position: absolute;
+        top: 100%;
+        /* Place it directly below the Menu */
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        width: auto;
+        /* Match the width of the menu */
+        border-radius: 15px;
+
+    }
+
+    .mennav:hover .drpd {
+        display: block;
+        /* Show dropdown on hover */
+    }
+
+    .menuul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        /* border-right: 30px; */
+        /* background-color: #fffb00; */
+
+    }
+
+    .menuul a {
+        text-decoration: none;
+    }
+
+    .menuul .menuli {
+        padding: 8px 16px;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .menuul .menuli:hover {
+        background-color: #fffb00;
+    }
+</style>
+
+{% load livereload_tags %}
+{% livereload_script %}
+<!-- python manage.py livereload-->
+<!-- python manage.py runserver-->

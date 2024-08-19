@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load livereload_tags %}
+{% livereload_script %} 
+    <script src="{% static 'index.js' %}">
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'ai logo.png' %}" type="image/x-icon">
+    <title>Ai Byte Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Grey+Qo&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<header class="container">
+    <a href=""><img class="logosize" src="{% static 'ai logo.png' %}" alt="Ai Byte Studio"></a>
+    <label for="qengine">
+    </label>
+    <input type="text" placeholder="Query Engine" class="qengine">
+
+    <nav class="mennav">
+        <img class="menuico" src="{% static 'menubuttonicon.png' %}">
+        <p class="Menudro">Menu</p>
+        <div class="drpd">
+            <ul class="menuul">
+                <a href="" class="menuanc">
+                    <li class="menuli"><img style="height: 30px;" src="{% static 'ai logo.png' %}" alt="">Home</li>
+                </a>
+                <a href="" class="menuanc">
+                    <li class="menuli">Services</li>
+                </a>
+                <a href="" class="menuanc">
+                    <li class="menuli">Replica</li>
+                </a>
+                <a href="" class="menuanc">
+                    <li class="menuli">Contact Us</li>
+                </a>
+                <a href="" class="menuanc">
+                    <li class="menuli">About Us</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <button id="darkModeToggle" class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <img id="darkModeIcon" src="{% static 'menubuttonicon.png' %}" alt="Toggle Dark Mode" style="height: 24px;">
+    </button>
+    <div class="txe">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, dignissimos. jfhsdjfhk
+    </div>
+    <!-- nav 2 -->
+    <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+  
+      
+
+
+
+</header>
+
+<body>
+    <h1>Ai support</h1>
+    <span class="buttonai">
+        <a href="" class="aibta">button1</a><a href="" class="aibta">button2</a><a href="" class="aibta">button3</a><a href="" class="aibta">button4</a><a href="" class="aibta">button5</a>
+    </span>
+</body>
+    
+
+</html>
+
+
+
+
+ 
+<!-- python manage.py livereload-->
+<!-- python manage.py runserver-->
+

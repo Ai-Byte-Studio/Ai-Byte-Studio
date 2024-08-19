@@ -1,0 +1,289 @@
+/* <style> */
+    .container {
+        display: flex;
+    }
+    
+    .logosize {
+        max-width: 4rem;
+    }
+    
+    .qengine {
+        max-width: 10rem;
+        border-radius: 50px;
+        border: none;
+        margin-top: 0.56rem;
+        margin-bottom: 0.4rem;
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+        height: 30px;
+    }
+    
+    .qengine::placeholder {
+        text-align: center;
+    }
+    
+    .menuico {
+        position: absolute;
+        
+        height: 3.5rem;
+    }
+    
+    .Menudro {
+        position: absolute;
+        z-index: 1;
+        transform: translate(50px, 3px);
+        margin-top: 0;
+        margin-bottom: 0;
+        
+        font-family: "Grey Qo", cursive;
+        font-optical-sizing: auto;
+        font-weight: 550;
+        font-size: 30px;
+        font-style: normal;
+        
+        
+    }
+    
+    .mennav {
+        position: relative;
+        width: fit-content;
+        /* Adjust as needed */
+    }
+    
+    .Menudro {
+        cursor: pointer;
+        font-weight: bold;
+        position: relative;
+        
+        padding: 8px 16px;
+        /* background-color: #333; Optional styling */
+        color: #030303;
+        /* Optional styling */
+    }
+
+    .drpd {
+        display: none;
+        /*Initially hidden*/
+        position: absolute;
+        top: 100%;
+        /* Place it directly below the Menu */
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        width: auto;
+        /* Match the width of the menu */
+        border-radius: 15px;
+
+    }
+
+    .mennav:hover .drpd {
+        display: block;
+        /* Show dropdown on hover */
+    }
+
+    .menuul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        /* border-right: 30px; */
+        /* background-color: #fffb00; */
+
+    }
+
+    .menuul a {
+        text-decoration: none;
+    }
+
+    .menuul .menuli {
+        padding: 8px 16px;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .menuul .menuli:hover {
+        background-color: #fffb00;
+    }
+    /* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Adjust the navigation and other elements for dark mode */
+.dark-mode .navbar {
+    background-color: #333;
+}
+
+.dark-mode .nav-links a {
+    color: #ffffff;
+}
+
+.dark-mode .mennav .drpd {
+    background-color: #333;
+}
+
+.dark-mode .menuul .menuli:hover {
+    background-color: #555;
+}
+
+/* </style> */
+/* <style> */
+    .dark-mode-toggle{
+        margin-left: 150px;
+    }
+    .darkModeIcon{
+        background: none;
+    }
+    .txe{
+
+        margin-left: 30px;
+        margin-top: 12px;
+        /* margin-left: 150px; */
+
+    }
+/* </style>
+<style> */
+    @media (max-width: 786px) {
+        .ainav{
+            display: none;
+        }
+        
+        .dark-mode-toggle{
+            display: none;
+        }
+
+        
+    }
+    .menicon{
+        
+        margin-left: 300px;
+        width: 10px;
+    }
+    .ainav {
+        /* display: inline-block; */
+        background-color: #fffb00;
+        margin-left: 150px;
+        border-radius: 46px;
+        /* width: auto; */
+        
+    }
+    .ainav .aili{
+        float: left;
+      list-style: none;
+      margin: 13px 20px;
+      
+    }
+    .ainav .aili .aia {
+        padding: 3px 3px;
+        text-decoration: none;
+        
+        
+        /* padding: 3px 3px; */
+        
+        
+    }
+    .ainav .aiul{
+        overflow: auto;
+    }
+    
+    .buttonai{
+        position:absolute;
+        /* position: absolute; */
+        display: grid;
+        max-width: 200px;
+        grid-template-columns: auto auto auto;
+        /* left: 50%; */
+
+        margin-left: 25%;
+
+        
+    }
+    .aibta{
+        padding: 10px;
+        text-decoration: none;
+        text-align: center;
+        background-color: rgb(255, 196, 0);
+        border-radius: 30px;
+        margin: 10px;
+        width: 90px;
+        height: 40px;
+        text-align: center;
+        
+    }
+    
+    
+/* </style> */
+ /* Base styles for the navbar */
+        .navbar {
+            background-color: #fa8e00;
+            padding: 10px 20px;
+            position: relative;
+            border-radius: 50px;
+        }
+        
+        /* Menu icon for mobile screens */
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+        
+        /* Navigation links */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            /* justify-content: space-around; */
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            padding: 10px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Media query for mobile screens */
+        @media (max-width: 768px) {
+            /* Hide the regular navbar and show the menu icon */
+            .txe{
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+        
+            /* Style the navigation links as a vertical sidebar */
+            .nav-links {
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: -250px;
+                width: 250px;
+                height: 100%;
+                background-color: #333;
+                padding-top: 60px;
+                transition: 0.3s;
+            }
+            
+            /* Adjust link padding for vertical layout */
+            .nav-links li {
+                padding: 15px 20px;
+            }
+            
+            /* When the menu is active, slide the sidebar into view */
+            .navbar.active .nav-links {
+                left: 0;
+            }
+            .navbar {
+            background-color: #fa8e00;
+            padding: 10px 20px;
+            position: relative;
+            margin-left: 280px;
+        }
+    }
