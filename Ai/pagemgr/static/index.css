@@ -6,7 +6,13 @@
     .logosize {
         max-width: 4rem;
     }
+    .list:hover .item:not(:hover){
+        filter: grayscale(1) blur(10px)
+    }
     
+    .list{
+        display: flex;
+    }
     .qengine {
         max-width: 10rem;
         border-radius: 50px;
