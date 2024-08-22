@@ -7,12 +7,26 @@
         max-width: 4rem;
     }
     .list:hover .item:not(:hover){
-        filter: grayscale(1) blur(10px)
+        filter: grayscale(1) blur(10px);
     }
-    
+  
     .list{
         display: flex;
+        justify-content: space-evenly;
+
+
     }
+    .banner{
+        margin-top: 50px;
+        
+    }
+    .img2 , .img4{
+        margin-top: 20px;
+    }
+    .img3{
+        margin-top: 30px;
+    }
+
     .qengine {
         max-width: 10rem;
         border-radius: 50px;
@@ -154,7 +168,9 @@
         .ainav{
             display: none;
         }
-        
+        .list{
+            display: none;
+        }
         .dark-mode-toggle{
             display: none;
         }
