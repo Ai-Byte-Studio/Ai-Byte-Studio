@@ -233,7 +233,12 @@
         text-align: center;
         
     }
-    
+
+    .scrolimg{
+        display: none;
+
+    }
+      
     
 /* </style> */
  /* Base styles for the navbar */
@@ -308,4 +313,14 @@
             position: relative;
             margin-left: 280px;
         }
+        .scrolimg{
+            display:grid;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+        .ding{
+            width: 700px;
+            object-fit: fill;
+        }
+    
     }
