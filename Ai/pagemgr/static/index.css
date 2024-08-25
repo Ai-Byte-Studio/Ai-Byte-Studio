@@ -233,12 +233,57 @@
         text-align: center;
         
     }
+    
+    /* .item{
+    }
+    .item:hover{
+
+        scale: 2;
+        /* animation: itmhvr 3s; */
+
+
+    /* } */
+    /* @media itmhvr(
+        100%{
+            
+        }
+    ) */
 
     .scrolimg{
         display: none;
 
     }
       
+    .item {
+        animation: none; /* initial state */
+        transition: animation 0.5s; /* transition effect */
+      }
+      
+      .item:hover {
+        animation: scaleUp 0.5s forwards; /* animation on hover */
+      }
+      
+      .item:not(:hover) {
+        animation: scaleDown 0.5s forwards; /* animation on unhover */
+      }
+      
+      @keyframes scaleUp {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(2);
+        }
+      }
+      
+      @keyframes scaleDown {
+        0% {
+          transform: scale(2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
     
 /* </style> */
  /* Base styles for the navbar */
@@ -266,6 +311,43 @@
             padding: 0;
         }
         
+        .contactcont {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+           .nav-links{
+            z-index: 1;
+        }
+          
+          .condiv {
+            margin: 10px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            transition: transform 0.3s;
+          }
+          
+          .condiv:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+          }
+          
+          .condiv a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+          }
+          
+          .condiv i {
+            margin-right: 10px;
+          }
+          a{
+            text-decoration: none;
+          }
+        /* .contimg {
+            font-size: 100px;
+          } */
         .nav-links li {
             padding: 10px;
         }

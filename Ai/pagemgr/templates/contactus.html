@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load livereload_tags %}
+    {% livereload_script %} 
+    <script src="{% static 'index.js' %}">
+    </script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'ai logo.png' %}" type="image/x-icon">
+    <title>Ai Byte Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Grey+Qo&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<header class="container">
+    <a href="index"><img class="logosize" src="{% static 'ai logo.png' %}" alt="Ai Byte Studio"></a>
+    <label for="qengine">
+    </label>
+    <input type="text" placeholder="Query Engine" class="qengine">
+
+    <nav class="mennav">
+        <img class="menuico" src="{% static 'menubuttonicon.png' %}">
+        <p class="Menudro">Menu</p>
+        <div class="drpd">
+            <ul class="menuul">
+                <a href="" class="menuanc">
+                    <li class="menuli"><img style="height: 30px;" src="{% static 'ai logo.png' %}" alt="">Home</li>
+                </a>
+                <a href="" class="menuanc">
+                    <li class="menuli">Services</li>
+                </a>
+                <a href="" class="menuanc">
+                    <li class="menuli">Replica</li>
+                </a>
+                <a href="" class="menuanc">
+                    <li class="menuli">Contact Us</li>
+                </a>
+                <a href="" class="menuanc">
+                    <li class="menuli">About Us</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <button id="darkModeToggle" class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <img id="darkModeIcon" src="{% static 'menubuttonicon.png' %}" alt="Toggle Dark Mode" style="height: 24px;">
+    </button>
+    <div class="txe">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, dignissimos. jfhsdjfhk
+    </div>
+    <!-- nav 2 -->
+    <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="index">Home</a></li>
+            <li><a href="Services">Services</a></li>
+            <li><a href="contactus">Contact Us</a></li>
+            <li><a href="About">About</a></li>
+        </ul>
+    </nav>
+</header>
+<style>
+   
+   .bdcontainre {
+  position: relative;
+}
+
+.imgp {
+  width: 100%; /* adjust the width to your liking */
+  height: 500px;
+  margin-top: 10px;
+  border-radius: 50px;
+}
+
+.ingtxt {
+    
+  position: absolute;
+  top: 21.3%;
+  left: 50.7%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; /* adjust the text color to your liking */
+  font-size: 50px; /* adjust the font size to your liking */
+  font-weight: bold; /* adjust the font weight to your liking */
+}
+</style>
+<body class="bdcontainre">
+    <img class="imgp" src="{% static 'leaf.png' %}" alt="">
+    <p class="ingtxt">Connect US To Stay Updated on Stink Points</p>
+</body>
+<div class="contactcont">
+    <div class="condiv condiv1">
+        <a href="https://www.facebook.com/" class="cdondiva cdondiva1" target="_blank">
+            <i class="bi bi-facebook contimg contimg1" style="font-size: 100px;"></i>
+            <p>This is Facebook</p>
+        </a>
+    </div>
+    <div class="condiv condiv2">
+        <a href="https://twitter.com/" class="cdondiva cdondiva2" target="_blank">
+            <i class="bi bi-twitter contimg contimg2" style="font-size: 100px;"></i>
+            <p>This is Twitter</p>
+        </a>
+    </div>
+    <div class="condiv condiv3">
+        <a href="https://www.whatsapp.com/" class="cdondiva cdondiva3" target="_blank">
+            <i class="bi bi-whatsapp contimg contimg3" style="font-size: 100px;"></i>
+            <p>This is WhatsApp</p>
+        </a>
+    </div>
+    <div class="condiv condiv4">
+        <a href="https://www.linkedin.com/" class="cdondiva cdondiva4" target="_blank">
+            <i class="bi bi-linkedin contimg contimg4" style="font-size: 100px;"></i>
+            <p>This is LinkedIn</p>
+        </a>
+    </div>
+    <div class="condiv condiv5">
+        <a href="https://github.com/" class="cdondiva cdondiva5" target="_blank">
+            <i class="bi bi-github contimg contimg5" style="font-size: 100px;"></i>
+            <p>This is GitHub</p>
+        </a>
+    </div>
+    <div class="condiv condiv6">
+        <a href="https://www.instagram.com/" class="cdondiva cdondiva6" target="_blank">
+            <i class="bi bi-instagram contimg contimg6" style="font-size: 100px;"></i>
+            <p>This is Instagram</p>
+        </a>
+    </div>
+    <div class="condiv condiv7">
+        <a href="https://www.youtube.com/" class="cdondiva cdondiva7" target="_blank">
+            <i class="bi bi-youtube contimg contimg7" style="font-size: 100px;"></i>
+            <p>This is YouTube</p>
+        </a>
+    </div>
+    <div class="condiv condiv8">
+        <a href="https://www.tiktok.com/" class="cdondiva cdondiva8" target="_blank">
+            <i class="bi bi-tiktok contimg contimg8" style="font-size: 100px;"></i>
+            <p>This is TikTok</p>
+        </a>
+    </div>
+    <div class="condiv condiv9">
+        <a href="https://console.cloud.google.com/" class="cdondiva cdondiva9" target="_blank">
+            <i class="bi bi-google contimg contimg9" style="font-size: 100px;"></i>
+            <p>This is Google</p>
+        </a>
+    </div>
+</div>
