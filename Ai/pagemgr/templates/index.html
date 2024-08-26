@@ -1,7 +1,9 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html class="thtml" lang="en">
+<!-- <style>
 
+</style> -->
 <head>
     {% load livereload_tags %}
     {% livereload_script %} 
@@ -48,7 +50,9 @@
         </div>
     </nav>
     <button id="darkModeToggle" class="dark-mode-toggle" onclick="toggleDarkMode()">
-        <img id="darkModeIcon" src="{% static 'menubuttonicon.png' %}" alt="Toggle Dark Mode" style="height: 24px;">
+        <div class="switch-button">
+            <div class="switch-handle"></div>
+        </div>
     </button>
     <div class="txe">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, dignissimos. jfhsdjfhk
     </div>
@@ -76,32 +80,84 @@
         <a href="" class="aibta">button1</a><a href="" class="aibta">button2</a><a href="" class="aibta">button3</a><a href="" class="aibta">button4</a><a href="" class="aibta">button5</a>
     </span>
 </body>  {% endcomment %}
+<pre>
+</pre>
 <div class="banner">
     <div class="list">
-        <div class="item img1"><img src="{% static "download.jpeg" %}" alt=""></div>
-        <div class="item img2"><img src="{% static "download.jpeg" %}" alt=""></div>
-        <div class="item img3"><img src="{% static "download.jpeg" %}" alt=""></div>
-        <div class="item img4"><img src="{% static "download.jpeg" %}" alt=""></div>
-        <div class="item img5"><img src="{% static "download.jpeg" %}" alt=""></div>
+      <div class="item img1">
+        <img class="ipt" src="{% static 'web.jpeg' %}" alt="">
+        <div class="overlay">
+          <p class="ptxt">Web Dev</p>
+          <button  class="bbutton">Web Dev</button>
+        </div>
+      </div>
+      <div class="item img2">
+        <img class="ipt" src="{% static 'datasci.jpeg' %}" alt="">
+        <div class="overlay">
+          <p class="ptxt">akjsdhfkj</p>
+          <button  class="bbutton">DataScience</button>
+        </div>
+      </div>
+      <div class="item img3">
+        <img class="ipt" src="{% static 'Robotics.jpg' %}" alt="">
+        <div class="overlay">
+          <p class="ptxt">akjsdhfkj</p>
+          <button  class="bbutton">AI Robitics</button>
+        </div>
+      </div>
+      <div class="item img4">
+        <img class="ipt" src="{% static 'neuralnet.jpeg' %}" alt="">
+        <div class="overlay">
+          <p class="ptxt">akjsdhfkj</p>
+          <button  class="bbutton">Neural Network</button>
+        </div>
+      </div>
+      <div class="item img5">
+        <img class="ipt" src="{% static 'APP.jpeg' %}" alt="">
+        <div class="overlay">
+          <p class="ptxt">akjsdhfkj</p>
+          <button  class="bbutton">App DeV</button>
+        </div>
+      </div>
     </div>
-</div>
-<div class="scrolimg">
-    <a href=""><img class="simg1 ding" src="{% static "download.jpeg" %}" alt=""></a>
-    <a href=""><img class="simg2 ding" src="{% static "download.jpeg" %}" alt=""></a>
-    <a href=""><img class="simg3 ding" src="{% static "download.jpeg" %}" alt=""></a>
-    <a href=""><img class="simg4 ding" src="{% static "download.jpeg" %}" alt=""></a>
-    <a href=""><img class="simg5 ding" src="{% static "download.jpeg" %}" alt=""></a>
-</div>
-    
+  </div>
 
+    
+  <div class="scrolimg">
+    <a href="">
+      <img class="simg1 ding" src="{% static 'web.jpeg' %}" alt="">
+      <p>Web Development</p>
+      <button>Learn More</button>
+    </a>
+    <a href="">
+      <img class="simg2 ding" src="{% static 'datasci.jpeg' %}" alt="">
+      <p>Data Science</p>
+      <button>Explore</button>
+    </a>
+    <a href="">
+      <img class="simg3 ding" src="{% static 'Robotics.jpg' %}" alt="">
+      <p>Robotics</p>
+      <button>Discover</button>
+    </a>
+    <a href="">
+      <img class="simg4 ding" src="{% static 'neuralnet.jpeg' %}" alt="">
+      <p>Neural Networks</p>
+      <button>Dive In</button>
+    </a>
+    <a href="">
+      <img class="simg5 ding" src="{% static 'APP.jpeg' %}" alt="">
+      <p>Mobile App Development</p>
+      <button>Get Started</button>
+    </a>
+  </div>
 </html>
 
 
 
-
+<footer>
+  
+</footer>
 
  
 <!-- python manage.py livereload-->
 <!-- python manage.py runserver-->
-
-

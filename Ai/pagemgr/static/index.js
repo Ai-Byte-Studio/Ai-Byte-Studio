@@ -1,19 +1,19 @@
+function toggleDarkMode() {
+    const body = document.body;
+    const switchHandle = document.querySelector('.switch-handle');
 
-    function toggleDarkMode() {
-        const body = document.body;
-        const darkModeIcon = document.getElementById('darkModeIcon');
+    body.classList.toggle('dark-mode');
 
-        body.classList.toggle('dark-mode');
-
-        // Switch the icon depending on the mode
-        if (body.classList.contains('dark-mode')) {
-            darkModeIcon.src = "{% static 'pngwing.com__1_-removebg-preview.png' %}";
-        } else {
-            darkModeIcon.src = "{% static 'pngwing.com__1_-removebg-preview.png' %}";
-        }
+    // Switch the handle depending on the mode
+    if (body.classList.contains('dark-mode')) {
+        switchHandle.style.transform = 'translateX(24px)';
+    } else {
+        switchHandle.style.transform = 'translateX(0)';
     }
-    // <script>
-        function toggleMenu() {
-        document.querySelector('.navbar').classList.toggle('active');
-    }
-    {/* </script> */}
+}
+
+// <script>
+function toggleMenu() {
+    document.querySelector('.navbar').classList.toggle('active');
+}
+// </script>
