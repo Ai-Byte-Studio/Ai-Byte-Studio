@@ -9,6 +9,7 @@
     {% livereload_script %} 
     <script src="{% static 'index.js' %}">
     </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'ai logo.png' %}" type="image/x-icon">
@@ -82,41 +83,87 @@
 </body>  {% endcomment %}
 <pre>
 </pre>
+
+
+<div style="position: relative;">
+  <img src="{% static 'pexels-ifreestock-585752.jpg' %}" alt="" style="height: 550px; width: 100%; object-fit: cover; border-radius: 10px;">
+<div style="position: absolute; top: 50%; color: #ffffff; background-color: rgb(128, 207, 181); left: 20%;  padding: 10px; border-radius: 30px; width: 70px;">
+
+  <a href="" >Get started</a>
+</div>
+  
+  <div style="position: absolute; top: 50%; left: 70%; transform: translate(-50%, -50%); width: 25%; padding: 20px; background-color: #ffffffb6; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+   
+    <div id="login-form">
+      <h2 style="margin-top: 0;">Login</h2>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" style="width: 90%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; margin-bottom: 20px;">
+        <input type="password" placeholder="Password" style="width: 90%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; margin-bottom: 20px;">
+        <input type="submit" value="Login" style="width: 100%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; background-color: #4CAF50; color: #fff; cursor: pointer;">
+      </form>
+      <p>Don't have an account? <a href="#" id="signup-link" style="text-decoration: none; color: #4CAF50;">Sign up</a></p>
+    </div>
+    <div id="signup-form" style="display: none;">
+      <h2 style="margin-top: 0;">Sign up</h2>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" style="width: 90%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; margin-bottom: 20px;">
+        <input type="email" placeholder="Email" style="width: 90%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; margin-bottom: 20px;">
+        <input type="password" placeholder="Password" style="width: 90%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; margin-bottom: 20px;">
+        <input type="submit" value="Sign up" style="width: 100%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; background-color: #4CAF50; color: #fff; cursor: pointer;">
+      </form>
+      <p>Already have an account? <a href="#" id="login-link" style="text-decoration: none; color: #4CAF50;">Login</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("signup-link").addEventListener("click", function() {
+    document.getElementById("login-form").style.display = "none";
+    document.getElementById("signup-form").style.display = "block";
+  });
+
+  document.getElementById("login-link").addEventListener("click", function() {
+    document.getElementById("login-form").style.display = "block";
+    document.getElementById("signup-form").style.display = "none";
+  });
+</script>
+
+
 <div class="banner">
     <div class="list">
       <div class="item img1">
         <img class="ipt" src="{% static 'web.jpeg' %}" alt="">
         <div class="overlay">
           <p class="ptxt">Web Dev</p>
-          <button  class="bbutton">Web Dev</button>
+          <button  class="bbutton">Learn More</button>
         </div>
       </div>
       <div class="item img2">
         <img class="ipt" src="{% static 'datasci.jpeg' %}" alt="">
         <div class="overlay">
           <p class="ptxt">akjsdhfkj</p>
-          <button  class="bbutton">DataScience</button>
+          <button  class="bbutton">Explore</button>
         </div>
       </div>
       <div class="item img3">
         <img class="ipt" src="{% static 'Robotics.jpg' %}" alt="">
         <div class="overlay">
           <p class="ptxt">akjsdhfkj</p>
-          <button  class="bbutton">AI Robitics</button>
+          <button  class="bbutton">Discover</button>
         </div>
       </div>
       <div class="item img4">
         <img class="ipt" src="{% static 'neuralnet.jpeg' %}" alt="">
         <div class="overlay">
           <p class="ptxt">akjsdhfkj</p>
-          <button  class="bbutton">Neural Network</button>
+          <button  class="bbutton">Dive In</button>
         </div>
       </div>
       <div class="item img5">
         <img class="ipt" src="{% static 'APP.jpeg' %}" alt="">
         <div class="overlay">
           <p class="ptxt">akjsdhfkj</p>
-          <button  class="bbutton">App DeV</button>
+          <button  class="bbutton">Get Started</button>
         </div>
       </div>
     </div>
@@ -155,8 +202,76 @@
 
 
 <footer>
-  
+  <br>
+  <pre class="footer-text">.     Contact us: +923258262310    
+      Email: aibytestudio | Location:  Pakistan.</pre>
+  <h1 class="footer-text">Follow Us ON</h1>
+  <div class="contactcont">
+    <div class="condiv condiv1">
+        <a href="https://www.facebook.com/" class="cdondiva cdondiva1" target="_blank">
+            <i class="bi bi-facebook contimg contimg1" style="font-size: 100px;"></i>
+            <p>This is Facebook</p>
+        </a>
+    </div>
+    <div class="condiv condiv2">
+        <a href="https://twitter.com/" class="cdondiva cdondiva2" target="_blank">
+            <i class="bi bi-twitter contimg contimg2" style="font-size: 100px;"></i>
+            <p>This is Twitter</p>
+        </a>
+    </div>
+    <div class="condiv condiv3">
+        <a href="https://www.whatsapp.com/" class="cdondiva cdondiva3" target="_blank">
+            <i class="bi bi-whatsapp contimg contimg3" style="font-size: 100px;"></i>
+            <p>This is WhatsApp</p>
+        </a>
+    </div>
+    <div class="condiv condiv4">
+        <a href="https://www.linkedin.com/" class="cdondiva cdondiva4" target="_blank">
+            <i class="bi bi-linkedin contimg contimg4" style="font-size: 100px;"></i>
+            <p>This is LinkedIn</p>
+        </a>
+    </div>
+    <div class="condiv condiv5">
+        <a href="https://github.com/" class="cdondiva cdondiva5" target="_blank">
+            <i class="bi bi-github contimg contimg5" style="font-size: 100px;"></i>
+            <p>This is GitHub</p>
+        </a>
+    </div>
+    <div class="condiv condiv6">
+        <a href="https://www.instagram.com/" class="cdondiva cdondiva6" target="_blank">
+            <i class="bi bi-instagram contimg contimg6" style="font-size: 100px;"></i>
+            <p>This is Instagram</p>
+        </a>
+    </div>
+    <div class="condiv condiv7">
+        <a href="https://www.youtube.com/" class="cdondiva cdondiva7" target="_blank">
+            <i class="bi bi-youtube contimg contimg7" style="font-size: 100px;"></i>
+            <p>This is YouTube</p>
+        </a>
+    </div>
+    <div class="condiv condiv8">
+        <a href="https://www.tiktok.com/" class="cdondiva cdondiva8" target="_blank">
+            <i class="bi bi-tiktok contimg contimg8" style="font-size: 100px;"></i>
+            <p>This is TikTok</p>
+        </a>
+    </div>
+    <div class="condiv condiv9">
+        <a href="https://console.cloud.google.com/" class="cdondiva cdondiva9" target="_blank">
+            <i class="bi bi-google contimg contimg9" style="font-size: 100px;"></i>
+            <p>This is Google</p>
+        </a>
+    </div>
+</div>
+  <br>
+  <p class="footer-text">Stay updated! Subscribe to our newsletter <a href="#"> update signup page</a></p>
+  <p class="footer-text">Powered by <strong>"Ai Byte Studio"</strong></p>
+  <p class="footer-text"><a href="">Terms of Use</a> | <a href="">Privacy Policy</a> | <a href="">Cookie Policy</a></p>
+  <p class="footer-text"><a href="">Sitemap</a> | <a href="">About Us</a> | <a href="">FAQ</a></p>
+  <p class="footer-text">© 2024 Ai Byte Studio. All rights reserved.</p>
+  <br> 
+     
 </footer>
+
 
  
 <!-- python manage.py livereload-->

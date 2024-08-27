@@ -1,0 +1,37 @@
+<div style="position: relative;">
+    <img src="{% static 'pexels-ifreestock-585752.jpg' %}" alt="" style="height: 550px; width: 100%; object-fit: cover; border-radius: 10px;">
+    <div style="position: absolute; top: 50%; left: 70%; transform: translate(-50%, -50%); width: 25%; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+        
+      <div id="login-form">
+        <h2 style="margin-top: 0;">Login</h2>
+        <form action="" method="post">
+          <input type="text" placeholder="Username" style="width: 100%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; margin-bottom: 20px;">
+          <input type="password" placeholder="Password" style="width: 100%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; margin-bottom: 20px;">
+          <input type="submit" value="Login" style="width: 100%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; background-color: #4CAF50; color: #fff; cursor: pointer;">
+        </form>
+        <p>Don't have an account? <a href="#" id="signup-link" style="text-decoration: none; color: #4CAF50;">Sign up</a></p>
+      </div>
+      <div id="signup-form" style="display: none;">
+        <h2 style="margin-top: 0;">Sign up</h2>
+        <form action="" method="post">
+          <input type="text" placeholder="Username" style="width: 100%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; margin-bottom: 20px;">
+          <input type="email" placeholder="Email" style="width: 100%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; margin-bottom: 20px;">
+          <input type="password" placeholder="Password" style="width: 100%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; margin-bottom: 20px;">
+          <input type="submit" value="Sign up" style="width: 100%; padding: 10px; border: none; border-radius: 10px; font-size: 18px; background-color: #4CAF50; color: #fff; cursor: pointer;">
+        </form>
+        <p>Already have an account? <a href="#" id="login-link" style="text-decoration: none; color: #4CAF50;">Login</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById("signup-link").addEventListener("click", function() {
+      document.getElementById("login-form").style.display = "none";
+      document.getElementById("signup-form").style.display = "block";
+    });
+  
+    document.getElementById("login-link").addEventListener("click", function() {
+      document.getElementById("login-form").style.display = "block";
+      document.getElementById("signup-form").style.display = "none";
+    });
+  </script>
